@@ -12,6 +12,7 @@ node_modules
 dist
 dist-ssr
 *.local
+DeveloperNotes
 
 # ─── IDE / Editor / OS Specific Files ────────────────
 .vscode/*
