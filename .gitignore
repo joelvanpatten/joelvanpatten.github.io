@@ -1,1 +1,25 @@
+# ─── LOGS ──────────────────────────
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ─── NPM / Node / Project-Specific Files ──────────────────────────
+node_modules
+dist
+dist-ssr
+*.local
+
+# ─── IDE / Editor / OS Specific Files ────────────────
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
 .idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
