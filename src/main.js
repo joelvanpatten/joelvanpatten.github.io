@@ -1,25 +1,25 @@
 import './style.css'
 import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
+import viteLogo from '/images/svg/vite.svg'
 import { setupCounter } from './counter.js'
 import { Hero } from './components/Hero.js'
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const app = document.querySelector('#app');
-  if (!app) return;
-
-  // If this is the homepage:
-  if (document.body.dataset.page === 'home') {
-    console.log('Homepage');
-    app.innerHTML = `
-      ${Hero({
-        title: 'Welcome to Joel Van Patten',
-        subtitle: 'Chiropractor, coder, creator.'
-      })}
-    `;
-  }
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//   const app = document.querySelector('#app');
+//   if (!app) return;
+//
+//   // If this is the homepage:
+//   // if (document.body.dataset.page === 'home') {
+//   //   console.log('Homepage');
+//   //   app.innerHTML = `
+//   //     ${Hero({
+//   //       title: 'Senior Software Engineer',
+//   //       subtitle: 'Full-Stack Developer'
+//   //     })}
+//   //   `;
+//   // }
+// });
 
 // document.querySelector('#app').innerHTML = `
 //   <div>
