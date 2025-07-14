@@ -15,6 +15,17 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --primary: theme('colors.primary.DEFAULT');     /* #A68184 */
+  --primary-100: theme('colors.primary.100');     /* #EEDDDD */
+  --primary-900: theme('colors.primary.900');     /* #5C3A3A */
+  --secondary: theme('colors.secondary.DEFAULT'); /* #4F5873 */
+  --accent: theme('colors.accent.DEFAULT');       /* #8C697C */
+  --whackadoodle: theme('colors.text.light');       /*  */
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 a {
@@ -74,7 +85,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #ffffff;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -97,4 +108,28 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/****-------------------****/
+/****  Hamburger Menu   ****/
+/****-------------------****/
+#menuToggle .bar:nth-child(1) {
+  transform-origin: top left;
+}
+#menuToggle .bar:nth-child(3) {
+  transform-origin: bottom left;
+}
+
+#menuToggle.menu-open .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(-5px);
+}
+#menuToggle.menu-open .bar:nth-child(2) {
+  opacity: 0;
+}
+#menuToggle.menu-open .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(5px);
+}
+
+button:hover {
+  border-color: var(--whackadoodle);
 }

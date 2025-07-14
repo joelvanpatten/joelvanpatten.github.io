@@ -8,16 +8,15 @@ export function menu() {
     function openMenu() {
         sideMenu.classList.remove('-translate-x-full');
         overlay.classList.remove('hidden');
-        hamburgerIcon.classList.add('hidden');
-        closeIcon.classList.remove('hidden');
+        toggleBtn.classList.add('menu-open');
     }
 
     function closeMenu() {
         sideMenu.classList.add('-translate-x-full');
         overlay.classList.add('hidden');
-        hamburgerIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
+        toggleBtn.classList.remove('menu-open');
     }
+
 
     toggleBtn.addEventListener('click', () => {
         const isOpen = !sideMenu.classList.contains('-translate-x-full');
@@ -30,5 +29,11 @@ export function menu() {
         if (e.key === 'Escape') {
             closeMenu();
         }
+    });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            closeMenu();
+        });
     });
 }
