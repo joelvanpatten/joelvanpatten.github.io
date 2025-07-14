@@ -3,6 +3,7 @@ import javascriptLogo from './javascript.svg'
 import viteLogo from '/images/svg/vite.svg'
 import { setupCounter } from './counter.js'
 import { Hero } from './components/Hero.js'
+import { menu } from './menu.js'
 
 
 // document.addEventListener('DOMContentLoaded', () => {
@@ -40,3 +41,15 @@ import { Hero } from './components/Hero.js'
 // `
 
 // setupCounter(document.querySelector('#counter'))
+
+// const toggleBtn = document.getElementById('menuToggle');
+// const overlayMenu = document.getElementById('overlayMenu');
+//
+// toggleBtn.addEventListener('click', () => {
+//     const isOpen = overlayMenu.classList.contains('translate-x-0');
+//
+//     overlayMenu.classList.toggle('translate-x-0', !isOpen);
+//     overlayMenu.classList.toggle('translate-x-full', isOpen);
+// });
+
+menu();
