@@ -5,8 +5,9 @@
     <link rel="icon" type="image/svg+xml" href="/images/svg/Laravel.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Joel Van Patten</title>
-    <script type="module" crossorigin src="/assets/index-CdUqBXJj.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CEnVsBY1.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script type="module" crossorigin src="/assets/index-DJ65IBsa.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-C3mYi-Sp.css">
   </head>
   <body class="font-sans min-h-screen flex flex-col" data-page="home">
 
@@ -155,11 +156,11 @@
         <h2 class="my-10 text-4xl uppercase text-light place-self-center">Code Samples</h2>
           <!-- Grid inside the content container -->
           <div class="min-h-80 p-8 rounded-3xl border border-accent bg-surface mx-auto max-w-3xl">
-            <img src="/images/svg/Notifish.svg" alt="Notifish App" width="180px" />
-            <h3 class="text-4xl">Notifish</h3>
-            <p class="text-xl mb-6"><strong>A lightweight event logging and visibility system for internal operational awareness. </strong></p>
+            <img class="place-self-center" src="/images/svg/Notifish.svg" alt="Notifish App" width="180px" />
+            <h3 class="-mt-6 place-self-center text-4xl">Notifish</h3>
+            <p class="text-xl mt-4 mb-6"><strong>A lightweight event logging and visibility system for internal operational awareness. </strong></p>
             <hr class="my-2"/>
-            <div class=" place-self-center">
+            <div class="place-self-center">
               View the source code on GitHub &nbsp; 👉 &nbsp;
               <a href="https://github.com/joelvanpatten/notifish" target="_blank">
                 https://github.com/joelvanpatten/notifish
@@ -212,11 +213,75 @@
       </div>
     </section>
 
-    <section class="bg-background w-full">
-      <div class="container mx-auto px-4 py-12">
-<!--        <p>New section</p>-->
+    <!-- CONTACT ME   -->
+    <section id="contact" class="bg-surface py-12 border-b-2 border-primary">
+      <div class="container mx-auto">
+        <div class="max-w-3xl mx-auto my-4">
+          <h3 class="text-primary">Contact Me</h3>
+          <h2 class="font-extrabold text-4xl mb-6">Let's Talk</h2>
+          <h3 class="font-semibold text-lg">We can explore how my expertise can help your business reach it's goals faster.</h3>
+
+          <!-- Contact Info Block -->
+          <div class="mt-12 space-y-6">
+            <!-- Phone -->
+            <div class="flex items-start space-x-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor"
+                   stroke-width="2"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   class="stroke-primary feather feather-phone"
+              >
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <p class="text-lg">+1 (916) 572-1560</p>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-start space-x-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="stroke-primary"
+              ><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <p class="text-lg">joelvanpatten@gmail.com</p>
+            </div>
+
+            <!-- Address -->
+            <div class="flex items-start space-x-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   class="stroke-primary"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <p class="text-lg">West Sacramento, CA</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <section class="bg-background py-12">
+      <div class="container mx-auto">
+         <div class="max-w-3xl mx-auto">
+           <div>Vue.js<i class="fab fa-vuejs"></i></div>
+         </div>
+      </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn"
+      class="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-primary text-white shadow-lg hover:bg-primary-700 focus:outline-none transition-opacity duration-300 opacity-0 pointer-events-none"
+      aria-label="Back to Top">
+      <!-- Up Arrow Icon (Heroicons or similar) -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+      </svg>
+    </button>
 
     <!-- Footer -->
     <div id="footer" class="w-full bg-surface mt-auto">
