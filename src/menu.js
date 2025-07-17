@@ -4,6 +4,7 @@ export function menu() {
     const overlay = document.getElementById('overlay');
     const hamburgerIcon = document.getElementById('hamburgerIcon');
     const closeIcon = document.getElementById('closeIcon');
+    const backToTopBtn = document.getElementById('backToTopBtn');
 
     function openMenu() {
         sideMenu.classList.remove('-translate-x-full');
@@ -34,6 +35,21 @@ export function menu() {
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
             closeMenu();
+        });
+    });
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+        } else {
+            backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
     });
 }
