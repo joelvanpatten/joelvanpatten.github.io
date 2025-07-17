@@ -5,8 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="/images/svg/Laravel.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Joel Van Patten</title>
-    <script type="module" crossorigin src="/assets/index-M9zHhI_q.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DlNNGTNd.css">
+    <script type="module" crossorigin src="/assets/index-CtcGB44g.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DzGrVftd.css">
   </head>
   <body class="font-sans min-h-screen flex flex-col" data-page="home">
 
@@ -19,25 +19,50 @@
         </div>
     
         <!-- Hamburger Menu -->
+        <!-- Hamburger Toggle Button -->
         <button
+            id="menuToggle"
+            class="bg-accent relative z-50 w-8 h-8 flex flex-col items-center justify-center space-y-1 group focus:outline-none"
             aria-label="Toggle Menu"
-            class="bg-accent text-gray-800 focus:outline-none hover:border-[#232226]"
         >
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+            <span class="block bar w-6 h-0.5 bg-gray-800 transition-all duration-300 ease-in-out origin-center"></span>
+            <span class="block bar w-6 h-0.5 bg-gray-800 transition-all duration-300 ease-in-out origin-center"></span>
+            <span class="block bar w-6 h-0.5 bg-gray-800 transition-all duration-300 ease-in-out origin-center"></span>
         </button>
       </nav>
     </header>
-    
+
+
+<!--
+  Core Proficiencies
+  Code Samples
+  Relevant Projects
+  Work Experience
+  About
+  Contact Us
+  ???
+  -->
+
+    <!-- Overlay (semi-transparent) -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-85 z-40 hidden"></div>
+    <!-- Sliding Menu -->
+    <aside id="sideMenu" class="fixed top-60 left-20 h-full w-3/4 sm:w-1/2 max-w-sm text-white transform
+    -translate-x-full transition-transform duration-300 ease-in-out z-50">
+      <nav class="flex flex-col items-start gap-6 p-8 text-2xl">
+        <a href="#home" class="nav-link text-text-light hover:text-primary">Home</a>
+        <a href="#about" class="nav-link text-text-light hover:text-primary">About</a>
+        <a href="#code-samples" class="nav-link text-text-light hover:text-primary">Code Samples</a>
+        <a href="#contact" class="nav-link text-text-light hover:text-primary">Contact</a>
+        <a href="#footer" class="nav-link text-text-light hover:text-primary">Footer</a>
+      </nav>
+    </aside>
+
     <section
         class="relative px-20 text-center flex items-center justify-center min-h-[60vh] bg-cover bg-center"
         style="background-image: url('/images/elegant_01.jpg');"
     >
       <div class="absolute inset-0 bg-black bg-opacity-50"></div>
       <div class="relative z-10 ">
-        <!--  <div id="app" class="flex-1 max-w-7xl mx-auto px-4 py-8 mt-4">&lt;!&ndash; JS will fill this &ndash;&gt;</div>-->
         <section class="pt-20 pb-10 text-center">
           <p class="text-xl text-gray-400">Joel Van Patten</p>
           <h1 class="text-5xl font-extrabold mb-4">Senior Software Engineer</h1>
@@ -45,10 +70,10 @@
         </section>
         <section class="text-start pb-20 w-[80%] mx-auto">
           <ul class="list-disc">
-            <li>Proven expertise in designing, developing, and maintaining robust back-end solutions, APIs, and integrations.</li>
-            <li>Adept at collaborating with front-end developers and stakeholders to deliver high-performance, scalable, and secure applications.</li>
-            <li>Skilled in optimizing application performance, implementing security measures, and ensuring code quality through testing and best practices.</li>
-            <li>Strong communicator with a track record of successful project management and cross-functional collaboration.</li>
+            <li class="my-2">Proven expertise in designing, developing, and maintaining robust back-end solutions, APIs, and integrations.</li>
+            <li class="my-2">Adept at collaborating with front-end developers and stakeholders to deliver high-performance, scalable, and secure applications.</li>
+            <li class="my-2">Skilled in optimizing application performance, implementing security measures, and ensuring code quality through testing and best practices.</li>
+            <li class="my-2">Strong communicator with a track record of successful project management and cross-functional collaboration.</li>
           </ul>
         </section>
       </div>
@@ -98,9 +123,71 @@
             <p class="absolute bottom-6 text-accent text-2xl mt-10">Pest</p>
           </div>
         </div>
+        <div class="grid grid-cols-1 gap-6 mt-6">
+          <div class="p-8 rounded-3xl border border-accent bg-surface place-items-center">
+            <div class="grid grid-cols-2 gap-x-6">
+              <p class="text-accent text-xl"># Laravel and PHP Development</p>
+              <p class="text-accent text-xl"># Database Management (MySQL, MariaDB, +)</p>
+              <p class="text-accent text-xl"># Performance Optimization and Scalability</p>
+              <p class="text-accent text-xl"># DevOps Practices (Docker, CI/CD)</p>
+              <p class="text-accent text-xl"># Agile Methodologies</p>
+              <p class="text-accent text-xl"># Front-End Technologies (Vue.js, React)</p>
+              <p class="text-accent text-xl"># API Design and Development</p>
+              <p class="text-accent text-xl"># Application Security and Compliance</p>
+              <p class="text-accent text-xl"># Version Control (Git / Git Flow)</p>
+              <p class="text-accent text-xl"># Project Management and Collaboration</p>
+              <p class="text-accent text-xl"># Automated Testing <br>&nbsp; &nbsp; (Pest / PHPUnit, Behat, Dusk, +)</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <section
+        id="code-samples"
+        class="relative w-full aspect-[3/2] bg-cover bg-center border-2 border-background border-y-accent"
+        style="background-image: url('/images/keyboard-warrior.jpeg');"
+    >
+      <!-- Optional overlay if you want the background dimmed -->
+      <div class="absolute inset-0 bg-black/80"></div>
+
+      <div class="relative container mx-auto px-10 py-12">
+        <h2 class="my-10 text-4xl uppercase text-light place-self-center">Code Samples</h2>
+          <!-- Grid inside the content container -->
+          <div class="min-h-80 p-8 rounded-3xl border border-accent bg-surface mx-auto max-w-3xl">
+            <img src="/images/svg/Notifish.svg" alt="Notifish App" width="180px" />
+            <h3 class="text-4xl">Notifish</h3>
+            <p class="text-xl mb-6"><strong>A lightweight event logging and visibility system for internal operational awareness. </strong></p>
+            <hr class="my-2"/>
+            <div class=" place-self-center">
+              View the source code on GitHub &nbsp; 👉 &nbsp;
+              <a href="https://github.com/joelvanpatten/notifish" target="_blank">
+                https://github.com/joelvanpatten/notifish
+              </a>
+            </div>
+            <hr class="mt-2 mb-8"/>
+            <p>You’d use it to track and visualize system-level events like:</p>
+            <ul class="list-disc mx-10 my-3">
+              <li>User registration</li>
+              <li>Emails sent (welcome, password reset, newsletter)</li>
+              <li>Reports generated or exported</li>
+              <li>Purchases made or invoices generated</li>
+              <li>Auth/login events +️ Errors or failed jobs (if you want to surface those)</li>
+              <li>Cron jobs / scheduled tasks that have run +️ API integrations that fired</li>
+            </ul>
+            <p class="mt-2">In a production app you don’t always want to send email/slack alerts for everything. But you also don’t
+              want to dig through logs to know what happened.  So a tool like <strong>Notifish</strong> sits in between - giving you
+              visibility into what your app is doing, without overwhelming your alerting systems.</p>
+            <p></p>
+          </div>
+      </div>
+    </section>
+
+    <section class="bg-background w-full">
+      <div class="container mx-auto px-4 py-12">
+<!--        <p>New section</p>-->
+      </div>
+    </section>
 
     <!-- Footer -->
     <div id="footer" class="w-full bg-surface mt-auto">
