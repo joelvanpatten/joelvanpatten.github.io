@@ -60,7 +60,7 @@
         class="relative px-20 text-center flex items-center justify-center min-h-[60vh] bg-cover bg-center"
         style="background-image: url('/images/elegant_01.jpg');"
     >
-      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="absolute inset-0 bg-black bg-opacity-30"></div>
       <div class="relative z-10 ">
         <section class="pt-20 pb-10 text-center">
           <p class="text-xl text-gray-400">Joel Van Patten</p>
@@ -124,7 +124,8 @@
         </div>
         <div class="grid grid-cols-1 gap-6 mt-6">
           <div class="p-8 rounded-3xl border border-accent bg-surface place-items-center">
-            <div class="grid grid-cols-2 gap-x-6">
+            <!-- Responsive grid: 1 column on mobile, 2 columns on md+ -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
               <p class="text-accent text-xl"># Laravel and PHP Development</p>
               <p class="text-accent text-xl"># Database Management (MySQL, MariaDB, +)</p>
               <p class="text-accent text-xl"># Performance Optimization and Scalability</p>
@@ -135,30 +136,29 @@
               <p class="text-accent text-xl"># Application Security and Compliance</p>
               <p class="text-accent text-xl"># Version Control (Git / Git Flow)</p>
               <p class="text-accent text-xl"># Project Management and Collaboration</p>
-              <p class="text-accent text-xl"># Automated Testing <br>&nbsp; &nbsp; (Pest / PHPUnit, Behat, Dusk, +)</p>
+              <p class="text-accent text-xl"># Automated Testing <br>&nbsp;&nbsp;(Pest / PHPUnit, Behat, Dusk, +)</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section
-        id="code-samples"
-        class="relative w-full aspect-[3/2] bg-cover bg-center border-2 border-background border-y-accent"
-        style="background-image: url('/images/keyboard-warrior.jpeg');"
-    >
-      <!-- Optional overlay if you want the background dimmed -->
-      <div class="absolute inset-0 bg-black/80"></div>
+      <section
+              id="code-samples"
+              class="relative w-full aspect-[3/2] bg-background bg-center md:bg-[url('/images/keyboard-warrior.jpeg')] md:bg-cover border-2 border-background border-y-accent"
+      >
+        <!-- Optional overlay if you want the background dimmed -->
+        <div class="absolute inset-0 bg-black/70 md:block hidden"></div>
 
-      <div class="relative container mx-auto px-10 py-12">
+      <div class="relative container mx-auto md:px-10 py-12">
         <h2 class="my-10 text-4xl uppercase text-light place-self-center">Code Samples</h2>
-          <!-- Grid inside the content container -->
+          <!-- Content Well inside the content container -->
           <div class="min-h-80 p-8 rounded-3xl border border-accent bg-surface mx-auto max-w-3xl">
             <img class="place-self-center" src="/images/svg/Notifish.svg" alt="Notifish App" width="180px" />
             <h3 class="-mt-6 place-self-center text-4xl">Notifish</h3>
             <p class="text-xl mt-4 mb-6"><strong>A lightweight event logging and visibility system for internal operational awareness. </strong></p>
             <hr class="my-2"/>
-            <div class="place-self-center">
+            <div class="md:place-self-center">
               View the source code on GitHub &nbsp; 👉 &nbsp;
               <a href="https://github.com/joelvanpatten/notifish" target="_blank">
                 https://github.com/joelvanpatten/notifish
