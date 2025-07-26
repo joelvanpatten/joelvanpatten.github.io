@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/joelvanpatten.github.io/images/svg/Laravel.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joel Van Patten</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script type="module" crossorigin src="/joelvanpatten.github.io/assets/main-CZXBixrW.js"></script>
+    <link rel="stylesheet" crossorigin href="/joelvanpatten.github.io/assets/main-C-bTALZK.css">
+  </head>
+  <body class="font-sans min-h-screen flex flex-col" data-page="home">
+
+    <header class="w-full sticky top-0 z-50 bg-surface shadow-md">
+      <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <img src="/joelvanpatten.github.io/images/purple-pink-gradient.png" alt="Logo" class="h-8 w-8" />
+          <span class="font-bold text-lg text-gray-400">Joel Van Patten</span>
+        </div>
+    
+        <!-- Hamburger Menu -->
+        <!-- Hamburger Toggle Button -->
+        <button
+            id="menuToggle"
+            class="bg-accent relative z-50 w-8 h-8 flex flex-col items-center justify-center space-y-1 group focus:outline-none"
+            aria-label="Toggle Menu"
+        >
+            <span class="block bar w-6 h-0.5 bg-gray-800 transition-all duration-300 ease-in-out origin-center"></span>
+            <span class="block bar w-6 h-0.5 bg-gray-800 transition-all duration-300 ease-in-out origin-center"></span>
+            <span class="block bar w-6 h-0.5 bg-gray-800 transition-all duration-300 ease-in-out origin-center"></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Overlay (semi-transparent) -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-85 z-40 hidden"></div>
+    <!-- Sliding Menu -->
+    <aside id="sideMenu" class="fixed top-40 left-16 h-full w-3/4 sm:w-1/2 max-w-sm text-white transform
+    -translate-x-full transition-transform duration-300 ease-in-out z-50">
+      <nav class="flex flex-col items-start gap-6 p-8 text-2xl">
+        <a href="index.html#home" class="nav-link text-text-light hover:text-primary">Home</a>
+<!--        <a href="index.html#about" class="nav-link text-text-light hover:text-primary">About</a>-->
+        <a href="index.html#code-samples" class="nav-link text-text-light hover:text-primary">Code Samples</a>
+        <a href="casestudies.html" class="nav-link text-text-light hover:text-primary">Case Studies</a>
+        <a href="index.html#contact" class="nav-link text-text-light hover:text-primary">Contact</a>
+<!--        <a href="#footer" class="nav-link text-text-light hover:text-primary">Footer</a>-->
+      </nav>
+    </aside>
+
+    <!-- Hero Image  -->
+    <section
+        class="relative px-20 text-center flex items-center justify-center min-h-[60vh] bg-cover bg-center"
+        style="background-image: url('/joelvanpatten.github.io/images/elegant_01.jpg');"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+      <div class="relative z-10 ">
+        <section class="pt-20 pb-10 text-center">
+          <!--  <p class="text-xl text-gray-400">Joel Van Patten</p>-->
+          <h1 class="text-5xl font-extrabold mb-4">Case Studies</h1>
+          <!--  <h2 class="text-xl text-gray-400">Yer Muthas Remiz is whack, yo!</h2>-->
+        </section>
+      </div>
+    </section>
+
+
+
+    <!-- BW CASE STUDY   -->
+    <section id="bwcase" class="bg-background py-12 border-b-2 border-primary">
+      <div class="container mx-auto">
+        <div class="max-w-3xl mx-auto my-4 px-4">
+          <!-- Logo -->
+          <!-- Logo with circular gradient stroke -->
+          <div class="flex items-center space-x-2">
+            <!-- Gradient stroke wrapper -->
+            <div class="size-24 rounded-full p-1 bg-gradient-to-b from-primary-900 to-secondary">
+              <img src="/joelvanpatten.github.io/images/JeffBacker.png" alt="Logo" class="h-full w-full rounded-full object-cover bg-background" />
+            </div>
+          </div>
+          <div class="font-bold text-md text-secondary">Jeff Backer</div>
+          <h3 class="text-primary">Backer Wencel Inc.</h3>
+          <h2 class="font-extrabold text-4xl flex items-start gap-2 mb-6">
+            <!-- Opening quote SVG -->
+            <svg
+                class="h-8 w-8 object-top"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+            >
+              <g>
+                <linearGradient id="maGrad3" x1="0" x2="512" y1="0" y2="256" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#A68184"/>
+                  <stop offset="1" stop-color="#A68184"/>
+                </linearGradient>
+                <path fill="url(#maGrad3)"  d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"/>
+              </g>
+            </svg>
+            <!-- Your headline -->
+            <div class="">Our Best Quarter Ever!</div>
+            <!-- Closing quote SVG -->
+            <svg
+                class="h-8 w-8"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="url(#maGrad3)" d="M464 32H336c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48zm-288 0H48C21.5 32 0 53.5 0 80v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48z"/>
+            </svg>
+          </h2>
+          <!-- <div class="font-semibold text-lg">We can explore how my expertise can help your business reach it's goals faster.</div>-->
+          <div class="space-y-6 text-base leading-relaxed text-gray-700">
+            <div>
+              <h4 class="text-lg font-semibold text-primary">Project Overview</h4>
+              <p class="text-white">
+                Backer Wencel Inc., a multi-product e-commerce business, needed a custom back-office system to streamline and centralize its administrative operations. The goal was to replace manual workflows and disparate systems with a unified, web-based portal that staff could use to process orders, manage shipping, reconcile invoices, and generate reports.
+              </p>
+              <p class="text-white mt-2">
+                I was brought on as an independent consultant to design and develop the solution from scratch. The initial version went live within one month (November 2019), with ongoing feature development and support continuing through May 2024.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="text-lg font-semibold text-primary">My Contributions</h4>
+              <ul class="list-disc list-inside space-y-1 text-white">
+                <li><strong>Requirements Gathering –</strong> Collaborated with the CTO and business owners to define goals and workflow improvements.</li>
+                <li><strong>System Design –</strong> Architected the entire system, including frontend UI/UX, backend services, and database schema.</li>
+                <li><strong>Development –</strong> Built the application using Laravel, Vue.js, and MariaDB, with responsive design and API integrations.</li>
+                <li><strong>Deployment & Support –</strong> Managed deployment and ongoing feature updates, ensuring performance and stability.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="text-lg font-semibold text-primary">Key Features & Outcomes</h4>
+              <ul class="list-disc list-inside space-y-1 text-white">
+                <li><strong>Cost Savings –</strong> A shipping invoice reconciliation tool saved over <span class="text-primary-100 font-semibold">$3,000/month</span> by identifying billing discrepancies.</li>
+                <li><strong>Efficiency Gains –</strong> Reduced manual data entry by streamlining workflows, saving <span class="font-semibold">12+ labor hours per week</span>.</li>
+                <li><strong>System Integrations –</strong> Connected to payment processors, vendors, and shipping APIs, automating critical processes.</li>
+                <li><strong>Security –</strong> Implemented encrypted password storage, CSRF protection, and custom access controls with an ACL system.</li>
+                <li><strong>Accessibility –</strong> Designed for readability and responsive use across devices with an intuitive and accessible UI.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="text-lg font-semibold text-primary">Tools & Technologies</h4>
+              <p class="text-white">
+                PHP, Laravel, Vue.js, JavaScript, HTML, CSS, MariaDB, SQL, XML, JSON, REST APIs.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="text-lg font-semibold text-primary">Impact Summary</h4>
+              <p class="text-white">
+                This long-term project delivered measurable results for the client, significantly improving operational efficiency and reducing costs. It demonstrates my ability to lead a full project lifecycle—from concept to deployment—as a full-stack developer and independent consultant.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT ME   -->
+    <section id="contact" class="bg-surface py-12 border-b-2 border-primary">
+      <div class="container mx-auto">
+        <div class="max-w-3xl mx-auto my-4 px-4">
+          <h3 class="text-primary">Contact Me</h3>
+          <h2 class="font-extrabold text-4xl mb-6">Let's Talk</h2>
+          <h3 class="font-semibold text-lg">We can explore how my expertise can help your business reach it's goals faster.</h3>
+
+          <!-- Contact Info Block -->
+          <div class="mt-12 space-y-6">
+            <!-- Phone -->
+            <div class="flex items-start space-x-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor"
+                   stroke-width="2"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   class="stroke-primary feather feather-phone"
+              >
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <p class="text-lg">+1 (916) 572-1560</p>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-start space-x-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="stroke-primary"
+              ><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <p class="text-lg">joelvanpatten@gmail.com</p>
+            </div>
+
+            <!-- Address -->
+            <div class="flex items-start space-x-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   class="stroke-primary"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <p class="text-lg">West Sacramento, CA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!--    <section class="bg-background py-12">-->
+<!--      <div class="container mx-auto">-->
+<!--         <div class="max-w-3xl mx-auto">-->
+<!--           <div>Vue.js<i class="fab fa-vuejs"></i></div>-->
+<!--         </div>-->
+<!--      </div>-->
+<!--    </section>-->
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn"
+      class="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-primary text-white shadow-lg hover:bg-primary-700 focus:outline-none transition-opacity duration-300 opacity-0 pointer-events-none"
+      aria-label="Back to Top">
+      <!-- Up Arrow Icon (Heroicons or similar) -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+      </svg>
+    </button>
+
+    <!-- Footer -->
+    <div id="footer" class="w-full bg-surface mt-auto">
+      <div class="max-w-6xl mx-auto px-4 py-8">
+        &copy; 2025 Joel Van Patten.
+      </div>
+    </div>
+
+  </body>
+</html>
