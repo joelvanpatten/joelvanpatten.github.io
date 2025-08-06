@@ -1,5 +1,14 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-    base: '/', // 🔁 Replace with your actual GitHub repo name
+    base: '/',
+    build: {
+        outDir: 'dist',
+        rollupOptions: {
+            input: {
+                main: './index.html',
+                casestudies: './casestudies.html',
+            },
+        },
+    },
 });
