@@ -220,3 +220,14 @@ button:hover {
 .markdown-content em {
   @apply italic text-text-light;
 }
+#icon-container img {
+  transition: transform 0.3s ease-in-out;
+}
+
+#icon-container img:hover {
+  /*transform: scale(1.2);*/
+  width: 4rem;
+  height: 4rem;
+  margin-top: 0;
+  transition-delay: 0s;
+}
