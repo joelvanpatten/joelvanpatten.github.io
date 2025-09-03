@@ -220,14 +220,25 @@ button:hover {
 .markdown-content em {
   @apply italic text-text-light;
 }
+
+#icon-container {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end; /* Keeps bottoms aligned for upward growth */
+  justify-content: flex-start; /* Left-aligns icons, so only right items shift */
+  min-height: 4rem; /* Matches hover height to prevent vertical layout shifts; adjust if needed */
+  /* Optional: gap: 1rem; for spacing between icons */
+}
+
 #icon-container img {
-  transition: transform 0.3s ease-in-out;
+  width: 3rem; /* Base width - adjust to your design */
+  height: 3rem; /* Base height - adjust to your design */
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+  will-change: width, height; /* Optimizes animation performance */
 }
 
 #icon-container img:hover {
-  /*transform: scale(1.2);*/
-  width: 4rem;
-  height: 4rem;
-  margin-top: 0;
-  transition-delay: 0s;
+  width: 4rem; /* Hover width */
+  height: 4rem; /* Hover height */
 }
