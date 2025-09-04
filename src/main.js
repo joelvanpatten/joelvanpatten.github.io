@@ -61,6 +61,18 @@ document.addEventListener('DOMContentLoaded', () => {
       iconContainer.appendChild(img);
     });
   }
+
+  const iconContainerSm = document.getElementById('icon-container-sm');
+  if (iconContainerSm) {
+    const firstFourIcons = icons.slice(0, 4); // Take the first four icons
+    firstFourIcons.forEach(iconFile => {
+      const img = document.createElement('img');
+      img.src = `/images/svg/ColorIcons/${iconFile}`;
+      img.alt = iconFile.replace('.svg', '').replace(/-/g, ' ');
+      img.classList.add('h-12', 'w-12'); // Example size, can be adjusted
+      iconContainerSm.appendChild(img);
+    });
+  }
 });
 
 menu();
