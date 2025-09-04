@@ -20,7 +20,22 @@ document.addEventListener('DOMContentLoaded', () => {
     'python-programming-language-icon.svg',
     'react-js-icon.svg',
     'typescript-programming-language-icon.svg',
-    'webpack-icon.svg'
+    'webpack-icon.svg',
+    'cursor-ai-code-icon.svg',
+    'bitbucket-icon.svg',
+    'c-sharp-programming-language-icon.svg',
+    'git-icon.svg',
+    'github-icon.svg',
+    'jquery-icon.svg',
+    'laravel-3d.svg',
+    'mariadb-icon.svg',
+    'redis-icon.svg',
+    'sass-icon.svg',
+    'tailwind-css-icon.svg',
+    'visual-studio-code-icon.svg',
+    'vue-js-icon.svg',
+    'wordpress-icon.svg',
+    'woocommerce-icon.svg'
   ];
 
   // const numberOfIcons = 14; // Fixed number of icons to create
