@@ -1,6 +1,11 @@
 // Placeholder for floating icons animation logic
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Prevent script execution on mobile devices (screen width less than 768px)
+  if (window.innerWidth < 640) {
+    return;
+  }
+
   const iconContainer = document.getElementById('icon-bubbles-container');
   if (!iconContainer) return;
 

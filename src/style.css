@@ -329,3 +329,9 @@ button:hover {
         transform: translateY(-30%) rotate(-12deg);
     }
 }
+
+@media (max-width: 640px) {
+  #icon-bubbles-container {
+    display: none;
+  }
+}
