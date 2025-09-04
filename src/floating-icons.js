@@ -7,37 +7,38 @@ document.addEventListener('DOMContentLoaded', () => {
   const iconPath = '/images/svg/ColorIcons';
 
   const iconList = [
-    'aws-icon.svg', 
-    'bootstrap-4-icon.svg', 
-    'css-icon.svg', 
-    'docker-icon.svg', 
-    'javascript-programming-language-icon.svg', 
-    'mysql-icon.svg', 
-    'node-js-black-icon.svg', 
-    'npm-icon.svg', 
-    'php-programming-language-icon.svg', 
-    'postman-icon.svg', 
-    'python-programming-language-icon.svg', 
-    'react-js-icon.svg', 
-    'typescript-programming-language-icon.svg', 
+    'aws-icon.svg',
+    'bootstrap-4-icon.svg',
+    'css-icon.svg',
+    'docker-icon.svg',
+    'javascript-programming-language-icon.svg',
+    'mysql-icon.svg',
+    'node-js-black-icon.svg',
+    'npm-icon.svg',
+    'php-programming-language-icon.svg',
+    'postman-icon.svg',
+    'python-programming-language-icon.svg',
+    'react-js-icon.svg',
+    'typescript-programming-language-icon.svg',
     'webpack-icon.svg'
   ];
 
-  const numberOfIcons = 14; // Fixed number of icons to create
+  // const numberOfIcons = 14; // Fixed number of icons to create
+  let iconsCreated = false; // Flag to ensure icons are only created once
 
   function createAndAnimateIcons() {
-    for (let i = 0; i < numberOfIcons; i++) {
+    if (iconsCreated) return; // Prevent re-creation
+
+    for (let i = 0; i < iconList.length; i++) {
       const img = document.createElement('img');
-      // const randomIcon = iconList[Math.floor(Math.random() * iconList.length)];
       const randomIcon = iconList[i];
       img.src = `${iconPath}/${randomIcon}`;
-      img.classList.add('bubble-icon');
+      img.classList.add('bubble-icon'); // Start with opacity: 0
 
       // Randomize top position
       img.style.top = `${Math.random() * 50}vh`;
 
       // Randomize animation duration for floatAcross and floatUpDown
-      // const floatAcrossDuration = `${Math.random() * 20 + 10}s`; // 10-30 seconds
       const floatAcrossDuration = `30s`; // 10-30 seconds
       const floatUpDownDuration = `${Math.random() * 10 + 5}s`; // 5-15 seconds
       img.style.animationDuration = `${floatAcrossDuration}, ${floatUpDownDuration}`;
@@ -46,8 +47,29 @@ document.addEventListener('DOMContentLoaded', () => {
       img.style.animationDelay = `${Math.random() * 30}s`; // 0-10 seconds delay
 
       iconContainer.appendChild(img);
+
+      // Trigger fade-in animation after a short delay to ensure CSS is applied
+      setTimeout(() => {
+        img.classList.add('bubble-icon-visible');
+      }, 100);
     }
+    iconsCreated = true;
   }
 
-  createAndAnimateIcons();
+  const observerOptions = {
+    root: null, // Use the viewport as the root
+    rootMargin: '0px',
+    threshold: 0.1 // Trigger when 10% of the container is visible
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        createAndAnimateIcons();
+        observer.unobserve(entry.target); // Stop observing once icons are created
+      }
+    });
+  }, observerOptions);
+
+  observer.observe(iconContainer);
 });

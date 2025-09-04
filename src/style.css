@@ -259,6 +259,8 @@ button:hover {
   position: absolute;
   animation: floatAcross 15s infinite linear, floatUpDown 3s infinite ease-in-out alternate;
   background-color: #ffffff;
+  opacity: 0; /* Hidden by default */
+  visibility: hidden; /* Ensure it's not visible before animation */
 }
 
 @keyframes floatAcross {
@@ -282,6 +284,20 @@ button:hover {
   100% {
     transform: translateY(0);
   }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.bubble-icon.bubble-icon-visible {
+  animation: floatAcross 15s infinite linear, floatUpDown 3s infinite ease-in-out alternate, fadeIn 1s forwards;
+  visibility: visible; /* Make visible when animation starts */
 }
 
 .integrations-header .shapes {
